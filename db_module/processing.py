@@ -23,10 +23,6 @@ class Process:
     stages: List[Stage]
 
 @dataclass
-class ProcessList:
-    processes: List[Process]
-
-@dataclass
 class Client:
     name: str
-    processes: ProcessList
+    processes: List[Process]

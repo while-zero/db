@@ -17,7 +17,6 @@ def second_client_function(src: db_module.processing.Source):
 
 
 first_client = db_module.processing.Client('Stefan', 
-                db_module.processing.ProcessList(
                     [
                         db_module.processing.Process(
                             [
@@ -30,7 +29,7 @@ first_client = db_module.processing.Client('Stefan',
                                     ])
                             ])
                     ]
-                )
+                
             )
 
 

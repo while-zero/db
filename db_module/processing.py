@@ -1,28 +1,10 @@
-from dataclasses import dataclass
-from typing import Callable, List
+import db_module.models
 
 
-@dataclass
-class Source:
-    name: str
-    type: str
-    src: str
-@dataclass
-class Activity:
-    name: str
-    source: Source
-    action: Callable[[Source], None]
+def first_client_function(src: db_module.models.Source):
+    print(f"source file name: {src.name}")
+    print('xxx')
 
-
-@dataclass
-class Stage:
-    name: str
-    activities: List[Activity]
-@dataclass
-class Process:
-    stages: List[Stage]
-
-@dataclass
-class Client:
-    name: str
-    processes: List[Process]
+def second_client_function(src: db_module.models.Source):
+    print(f"source file name: {src.name}")
+    print('yyy')

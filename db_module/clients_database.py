@@ -1,6 +1,7 @@
 import db_module.models
+import db_module.processing
 
-clients: list[db_module.models.Client] = [db_module.models.Client('Stefan', 
+clients = {'Stefan': 
                     [
                         db_module.models.Process(
                             [
@@ -12,13 +13,13 @@ clients: list[db_module.models.Client] = [db_module.models.Client('Stefan',
                                                     'iris',
                                                     'csv',
                                                     'https://gist.githubusercontent.com/netj/8836201/raw/6f9306ad21398ea43cba4f7d537619d0e07d5ae3/iris.csv'), 
-                                                first_client_function)
+                                                db_module.processing.first_client_function)
                                     ])
                             ])
                     ]
                 
-            )
-        , db_module.models.Client('Bob', 
+            
+        , 'Bob': 
                     [
                         db_module.models.Process(
                             [
@@ -30,10 +31,7 @@ clients: list[db_module.models.Client] = [db_module.models.Client('Stefan',
                                                     'movies',
                                                     'csv',
                                                     'https://gist.githubusercontent.com/tiangechen/b68782efa49a16edaf07dc2cdaa855ea/raw/0c794a9717f18b094eabab2cd6a6b9a226903577/movies.csv'), 
-                                                second_client_function)
+                                                db_module.processing.second_client_function)
                                     ])
                             ])
-                    ]
-                
-            )
-]
+                    ]}
